@@ -1,148 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Espacio CUN</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 30px 15px;
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            color: #222;
-        }
-
-        .container {
-            max-width: 650px;
-            margin: auto;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .logo {
-            font-size: 50px;
-        }
-
-        h1 {
-            margin: 10px 0;
-        }
-
-        .subtitle {
-            color: #666;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .section-title {
-            margin-bottom: 15px;
-        }
-
-        .link {
-            display: block;
-            background: white;
-            color: #222;
-            text-decoration: none;
-            padding: 18px 20px;
-            margin-bottom: 12px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
-
-        .link:hover {
-            transform: translateY(-2px);
-        }
-
-        .link-title {
-            font-weight: bold;
-        }
-
-        .link-description {
-            margin-top: 5px;
-            font-size: 13px;
-            color: #777;
-        }
-
-        footer {
-            text-align: center;
-            color: #888;
-            font-size: 13px;
-            margin-top: 35px;
-        }
-    </style>
-</head>
-
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mi Espacio CUN</title>
+<style>
+:root{--g:#06453f;--g2:#087f70;--lime:#9bea4c;--bg:#f3f7f6;--card:#fff;--txt:#12302e;--muted:#6d7f7c;--line:#dce8e6;--shadow:0 12px 32px #063f3b12}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--txt)}button,input,select{font:inherit}button{cursor:pointer}
+.app{min-height:100vh}.side{position:fixed;inset:0 auto 0 0;width:245px;padding:24px 14px;background:linear-gradient(180deg,#032f2c,#06433f);color:#fff;z-index:20;display:flex;flex-direction:column}.brand{display:flex;gap:12px;align-items:center;padding:0 8px 25px}.brandmark{width:48px;height:48px;border-radius:14px;background:#fff;color:var(--g);display:grid;place-items:center;font-weight:900}.brand b{display:block}.brand small{color:#b8cfcc}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#d6e6e3;padding:12px;border-radius:12px;text-align:left}.nav button:hover,.nav .active{background:#087d6b;color:#fff}.bottom{margin-top:auto}.quote{text-align:center;color:#9fbdb8;font-size:12px;padding:20px;border-top:1px solid #ffffff1c}
+main{margin-left:245px}.top{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 34px;gap:20px;position:sticky;top:0;z-index:10}.search{flex:1;max-width:600px}.search input{width:100%;height:44px;border:1px solid var(--line);border-radius:13px;padding:0 16px;outline:0;background:#f8fbfb}.profile{margin-left:auto;display:flex;gap:10px;align-items:center}.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#e5f3ef}.content{max-width:1250px;margin:auto;padding:26px}
+.hero{min-height:205px;border-radius:20px;padding:34px 38px;color:#fff;position:relative;overflow:hidden;background:linear-gradient(100deg,#033c38,#087064 65%,#3e8074);box-shadow:var(--shadow)}.hero:after{content:'🎓';position:absolute;right:8%;top:28px;font-size:100px;opacity:.16}.hero h1{margin:0;font-size:38px}.hero h2{margin:5px 0 14px;font-size:20px;font-weight:400}.hero p{color:#d5ebe7;max-width:650px}.badge{display:inline-block;margin-top:12px;padding:8px 12px;border-radius:99px;background:#ffffff1c;font-size:12px}
+.greet{margin-top:16px;background:#effbf7;border:1px solid #cfe9e1;border-radius:18px;padding:17px 21px;display:flex;align-items:center;gap:15px}.greet .avatar{background:#08785f;color:#fff}.greet h3{margin:0}.greet p{margin:4px 0 0;color:#58716e;font-size:12px}.date{margin-left:auto;text-align:right;border-left:1px solid #cfe3df;padding-left:20px;font-size:12px}.date span{display:block;background:#baf0ce;color:#216b46;padding:5px 8px;border-radius:99px;margin-top:5px;font-weight:700;font-size:10px}
+.section{margin-top:28px}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:14px}.head h2{margin:0;font-size:19px}.head p{margin:4px 0 0;color:var(--muted);font-size:12px}.addmini{border:1px solid var(--line);background:#fff;color:var(--g);border-radius:99px;padding:8px 13px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 7px 22px #0f39350d;position:relative;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.ctop{height:70px;padding:13px 17px;display:flex;align-items:center}.icon{width:45px;height:45px;border-radius:13px;background:#ffffffbb;display:grid;place-items:center;font-size:21px}.blue{background:#8eb5ff}.green{background:#89e1bc}.yellow{background:#ffe07c}.purple{background:#c6adf0}.body{padding:15px 17px}.body h3{font-size:14px;margin:0}.body p{font-size:11px;color:var(--muted);line-height:1.4;min-height:31px}.open{width:100%;border:0;border-radius:10px;padding:9px;background:#edf5ff;color:#185bb6;font-weight:700;font-size:11px}.greenbtn{background:#e6f8f0;color:#08725c}.yellowbtn{background:#fff7dd;color:#7a5a00}.purplebtn{background:#f1eafa;color:#6240a2}.tools{position:absolute;right:7px;top:7px;display:flex;gap:4px}.tools button{border:0;background:#ffffffe8;border-radius:50%;width:27px;height:27px}
+.smallgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.small{background:#fff;border:1px solid var(--line);border-radius:15px;padding:15px;display:flex;align-items:center;gap:11px}.smallicon{width:42px;height:42px;border-radius:12px;background:#eaf3ff;display:grid;place-items:center}.small strong{font-size:12px}.small span{display:block;color:#43a078;background:#edf9f3;padding:3px 6px;border-radius:99px;font-size:10px;margin-top:5px;width:max-content}.arrow{margin-left:auto}.cta{margin-top:28px;background:linear-gradient(90deg,#063f3b,#07594f);color:#fff;border-radius:17px;padding:20px 23px;display:flex;align-items:center;gap:15px}.plus{width:48px;height:48px;border-radius:50%;background:var(--lime);color:#174728;display:grid;place-items:center;font-size:28px}.cta h3{margin:0;font-size:14px}.cta p{margin:4px 0 0;color:#bcd5d1;font-size:11px}.cta button{margin-left:auto;border:0;border-radius:99px;background:var(--lime);color:#174728;padding:11px 18px;font-weight:800}.foot{padding:28px 2px 10px;color:#82928f;font-size:10px;display:flex;justify-content:space-between}
+.modalbg{display:none;position:fixed;inset:0;background:#001c1a88;backdrop-filter:blur(4px);z-index:50;align-items:center;justify-content:center;padding:20px}.modalbg.show{display:flex}.modal{width:min(500px,100%);background:#fff;border-radius:20px;padding:24px}.modalhead{display:flex;justify-content:space-between}.modalhead h2{margin:0}.close{border:0;border-radius:50%;width:34px;height:34px}.field{margin-top:13px}.field label{display:block;font-size:11px;font-weight:800;margin-bottom:5px}.field input,.field select{width:100%;height:42px;border:1px solid var(--line);border-radius:10px;padding:0 11px}.actions{text-align:right;margin-top:18px}.actions button{border:0;border-radius:10px;padding:10px 15px;margin-left:7px}.cancel{background:#edf2f1}.save{background:var(--g2);color:#fff}
+@media(max-width:1050px){.grid,.smallgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:780px){.side{transform:translateX(-100%);transition:.2s}.side.open{transform:none}main{margin-left:0}.top{height:66px;padding:0 15px}.menub{display:block;border:0;background:none;font-size:22px}.content{padding:16px}.hero{padding:27px 23px}.hero h1{font-size:30px}.hero:after{display:none}.date{display:none}.grid,.smallgrid{grid-template-columns:1fr}.foot{flex-direction:column;gap:8px}.profiletext{display:none}}
+@media(min-width:781px){.menub{display:none}}
+</style></head>
 <body>
-
-<div class="container">
-
-    <header>
-        <div class="logo">🎓</div>
-        <h1>Mi Espacio CUN</h1>
-        <p class="subtitle">Ingeniería de Software</p>
-    </header>
-
-    <section class="section">
-
-        <h2 class="section-title">🔗 Accesos principales</h2>
-
-        <a class="link" href="#">
-            <div class="link-title">📧 Correo institucional</div>
-            <div class="link-description">
-                Acceso al correo de la universidad
-            </div>
-        </a>
-
-        <a class="link" href="#">
-            <div class="link-title">🎓 Plataforma académica</div>
-            <div class="link-description">
-                Acceso a la plataforma de la universidad
-            </div>
-        </a>
-
-        <a class="link" href="#">
-            <div class="link-title">☁️ Google Drive</div>
-            <div class="link-description">
-                Documentos y evidencias
-            </div>
-        </a>
-
-    </section>
-
-    <section class="section">
-
-        <h2 class="section-title">📚 Recursos</h2>
-
-        <a class="link" href="#">
-            <div class="link-title">📂 Evidencias</div>
-            <div class="link-description">
-                Trabajos y evidencias de la universidad
-            </div>
-        </a>
-
-        <a class="link" href="#">
-            <div class="link-title">👨‍🏫 Profesores</div>
-            <div class="link-description">
-                Enlaces proporcionados por los profesores
-            </div>
-        </a>
-
-    </section>
-
-    <footer>
-        Mi espacio universitario · 2026
-    </footer>
-
-</div>
-
-</body>
-</html>
-   
-
-     
+<aside class="side" id="side"><div class="brand"><div class="brandmark">CUN</div><div><b>Mi Espacio CUN</b><small>Ingeniería de Software</small></div></div><nav class="nav"><button class="active" onclick="topPage()">⌂ &nbsp; Inicio</button><button onclick="go('accesos')">🔗 &nbsp; Accesos principales</button><button onclick="go('materias')">📖 &nbsp; Mis materias</button><button onclick="go('recursos')">📁 &nbsp; Recursos</button><button onclick="openForm('Profesores')">👨‍🏫 &nbsp; Profesores</button><button onclick="openForm('Evidencias')">📋 &nbsp; Evidencias</button><button onclick="openForm()">⊕ &nbsp; Agregar enlace</button></nav><div class="bottom"><div class="quote">Grandes sueños<br>requieren grandes<br>herramientas.</div></div></aside>
+<main><header class="top"><button class="menub" onclick="toggleSide()">☰</button><div class="search"><input id="search" placeholder="Buscar enlaces, materias o recursos..." oninput="render()"></div><div class="profile"><div class="avatar">👤</div><div class="profiletext"><b style="font-size:13px">Elioenay Sulbaran</b><small style="display:block;color:var(--muted)">Estudiante</small></div></div></header>
+<div class="content"><section class="hero"><h1>🎓 Mi Espacio CUN</h1><h2>Ingeniería de Software</h2><p>Tu centro personal para acceder a todo lo que necesitas en tu vida universitaria.</p><span class="badge">✦ Organiza · Accede · Aprende</span></section>
+<section class="greet"><div class="avatar">👤</div><div><h3>¡Hola, Elioenay! 👋</h3><p>Estudiante de Ingeniería de Software · “El único límite es el que tú te pones.”</p></div><div class="date"><b>📅 Hoy es</b><span id="today"></span></div></section>
+<section class="section" id="accesos"><div class="head"><div><h2>🔗 Accesos principales</h2><p>Enlaces que usas con más frecuencia.</p></div><button class="addmini" onclick="openForm()">＋ Agregar</button></div><div class="grid" id="links"></div></section>
+<section class="section" id="materias"><div class="head"><div><h2>📖 Mis materias</h2><p>Accede rápidamente a tus materias.</p></div></div><div class="smallgrid"><div class="small"><div class="smallicon">💻</div><div><strong>Ingeniería de Software</strong><span>5 enlaces</span></div><b class="arrow">›</b></div><div class="small"><div class="smallicon">🗄️</div><div><strong>Bases de Datos</strong><span>3 enlaces</span></div><b class="arrow">›</b></div><div class="small"><div class="smallicon">🌐</div><div><strong>Desarrollo Web</strong><span>4 enlaces</span></div><b class="arrow">›</b></div><div class="small"><div class="smallicon">🧮</div><div><strong>Matemáticas</strong><span>2 enlaces</span></div><b class="arrow">›</b></div></div></section>
+<section class="section" id="recursos"><div class="head"><div><h2>📁 Recursos</h2><p>Herramientas y enlaces útiles.</p></div></div><div class="smallgrid"><div class="small"><div class="smallicon">👨‍🏫</div><div><strong>Profesores</strong><span>Enlaces</span></div><b class="arrow">›</b></div><div class="small"><div class="smallicon">📚</div><div><strong>Biblioteca digital</strong><span>Recursos</span></div><b class="arrow">›</b></div><div class="small"><div class="smallicon">📅</div><div><strong>Calendario académico</strong><span>Fechas</span></div><b class="arrow">›</b></div><div class="small"><div class="smallicon">📄</div><div><strong>Trámites y servicios</strong><span>Información</span></div><b class="arrow">›</b></div></div></section>
+<section class="cta"><div class="plus">＋</div><div><h3>¿Necesitas agregar un nuevo enlace?</h3><p>Crea tus propios accesos personalizados de forma rápida y sencilla.</p></div><button onclick="openForm()">Agregar enlace →</button></section><footer class="foot"><span>Mi Espacio CUN</span><span>Ingeniería de Software · 2026</span><span>Hecho para organizar tu vida universitaria ♥</span></footer></div></main>
+<div class="modalbg" id="modal"><div class="modal"><div class="modalhead"><h2 id="mtitle">Agregar enlace</h2><button class="close" onclick="closeForm()">×</button></div><form onsubmit="save(event)"><input id="eid" type="hidden"><div class="field"><label>Nombre</label><input id="name" required placeholder="Ej. Correo institucional"></div><div class="field"><label>URL</label><input id="url" type="url" required placeholder="https://..."></div><div class="field"><label>Descripción</label><input id="desc" placeholder="Ej. Acceso al correo de la universidad"></div><div class="field"><label>Categoría</label><select id="cat"><option>Accesos principales</option><option>Recursos</option><option>Profesores</option><option>Evidencias</option><option>Otros</option></select></div><div class="actions"><button type="button" class="cancel" onclick="closeForm()">Cancelar</button><button class="save">Guardar</button></div></form></div></div>
+<script>
+const defaults=[
+{id:1,name:'Correo institucional',url:'#',desc:'Acceso al correo de la universidad',emoji:'📧',color:'blue',btn:''},
+{id:2,name:'Plataforma académica',url:'#',desc:'Acceso a la plataforma de estudiantes',emoji:'🎓',color:'green',btn:'greenbtn'},
+{id:3,name:'Google Drive',url:'#',desc:'Documentos y evidencias',emoji:'☁️',color:'yellow',btn:'yellowbtn'},
+{id:4,name:'Evidencias',url:'#',desc:'Trabajos y evidencias de la universidad',emoji:'📁',color:'purple',btn:'purplebtn'}];
+let links=JSON.parse(localStorage.getItem('cunLinks')||'null')||defaults;
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function render(){let q=document.getElementById('search').value.toLowerCase();let list=links.filter(x=>(x.name+x.desc).toLowerCase().includes(q));let box=document.getElementById('links');box.innerHTML=list.length?'':'<div style="grid-column:1/-1;background:#fff;border:1px dashed #b9cfcb;border-radius:15px;padding:28px;text-align:center;color:#71827f">No se encontraron enlaces.</div>';list.forEach(x=>{box.innerHTML+=`<article class="card"><div class="tools"><button onclick="edit(${x.id})">✎</button><button onclick="del(${x.id})">×</button></div><div class="ctop ${x.color}"><div class="icon">${x.emoji}</div></div><div class="body"><h3>${esc(x.name)}</h3><p>${esc(x.desc||'Enlace personalizado')}</p><button class="open ${x.btn}" onclick="openLink('${encodeURIComponent(x.url)}')">Abrir enlace →</button></div></article>`})}
+function openLink(u){u=decodeURIComponent(u);if(u==='#')return alert('Este enlace todavía está pendiente de configurar.');window.open(u,'_blank','noopener')}
+function openForm(cat){document.getElementById('modal').classList.add('show');document.getElementById('mtitle').textContent='Agregar enlace';document.getElementById('eid').value='';document.getElementById('name').value='';document.getElementById('url').value='';document.getElementById('desc').value='';document.getElementById('cat').value=cat||'Accesos principales'}
+function closeForm(){document.getElementById('modal').classList.remove('show')}
+function save(e){e.preventDefault();let id=document.getElementById('eid').value;let x={id:id?+id:Date.now(),name:name.value.trim(),url:url.value.trim(),desc:desc.value.trim(),emoji:'🔗',color:'green',btn:'greenbtn'};links=id?links.map(a=>a.id==id?x:a):[...links,x];localStorage.setItem('cunLinks',JSON.stringify(links));render();closeForm()}
+function edit(id){let x=links.find(a=>a.id==id);openForm(x.category);mtitle.textContent='Editar enlace';eid.value=x.id;name.value=x.name;url.value=x.url;desc.value=x.desc}
+function del(id){if(confirm('¿Eliminar este enlace?')){links=links.filter(x=>x.id!=id);localStorage.setItem('cunLinks',JSON.stringify(links));render()}}
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});document.getElementById('side').classList.remove('open')}
+function topPage(){window.scrollTo({top:0,behavior:'smooth'});document.getElementById('side').classList.remove('open')}
+function toggleSide(){document.getElementById('side').classList.toggle('open')}
+document.getElementById('today').textContent=new Date().toLocaleDateString('es-CO',{day:'numeric',month:'long',year:'numeric'});render();
+</script></body></html>
