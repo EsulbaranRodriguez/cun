@@ -1,12 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Espacio CUN</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
 
         .container {
             width: 100%;
             max-width: 650px;
+            margin: 0 auto;
         }
 
         header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .logo {
@@ -15,40 +36,37 @@
         }
 
         h1 {
-            font-size: 28px;
-            margin-bottom: 8px;
+            margin: 0;
+            font-size: 30px;
         }
 
         .subtitle {
+            margin-top: 8px;
             color: #666;
-            font-size: 16px;
         }
 
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .section-title {
-            font-size: 18px;
-            margin-bottom: 12px;
-            font-weight: bold;
+            font-size: 19px;
+            margin-bottom: 15px;
         }
 
         .link {
             display: block;
-            text-decoration: none;
-            background: white;
-            color: #222;
             padding: 18px 20px;
             margin-bottom: 12px;
+            background: white;
+            color: #222;
+            text-decoration: none;
             border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
         }
 
         .link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
         }
 
         .link-title {
@@ -57,38 +75,28 @@
         }
 
         .link-description {
+            margin-top: 5px;
             font-size: 13px;
             color: #777;
-            margin-top: 5px;
         }
 
         footer {
             text-align: center;
-            color: #888;
+            margin-top: 35px;
             font-size: 13px;
-            margin-top: 30px;
-        }
-
-        @media (max-width: 500px) {
-            h1 {
-                font-size: 24px;
-            }
-
-            .link {
-                padding: 16px;
-            }
+            color: #888;
         }
     </style>
 </head>
 
 <body>
 
-    <main class="container">
+    <div class="container">
 
         <header>
             <div class="logo">🎓</div>
 
-            <h1>Mi Universidad</h1>
+            <h1>Mi Espacio CUN</h1>
 
             <p class="subtitle">
                 Ingeniería de Software
@@ -102,22 +110,33 @@
                 🔗 Accesos principales
             </h2>
 
-            <a class="link" href="#" target="_blank">
-                <div class="link-title">📧 Correo institucional</div>
+            <a class="link" href="#">
+                <div class="link-title">
+                    📧 Correo institucional
+                </div>
+
                 <div class="link-description">
                     Acceso al correo de la universidad
                 </div>
             </a>
 
-            <a class="link" href="#" target="_blank">
-                <div class="link-title">🎓 Plataforma académica</div>
+
+            <a class="link" href="#">
+                <div class="link-title">
+                    🎓 Plataforma académica
+                </div>
+
                 <div class="link-description">
                     Acceso a la plataforma de la universidad
                 </div>
             </a>
 
-            <a class="link" href="#" target="_blank">
-                <div class="link-title">☁️ Google Drive</div>
+
+            <a class="link" href="#">
+                <div class="link-title">
+                    ☁️ Google Drive
+                </div>
+
                 <div class="link-description">
                     Documentos y evidencias
                 </div>
@@ -132,15 +151,23 @@
                 📚 Recursos
             </h2>
 
-            <a class="link" href="#" target="_blank">
-                <div class="link-title">📂 Evidencias</div>
+
+            <a class="link" href="#">
+                <div class="link-title">
+                    📂 Evidencias
+                </div>
+
                 <div class="link-description">
-                    Carpeta para guardar trabajos y evidencias
+                    Trabajos y evidencias de la universidad
                 </div>
             </a>
 
-            <a class="link" href="#" target="_blank">
-                <div class="link-title">👨‍🏫 Profesores</div>
+
+            <a class="link" href="#">
+                <div class="link-title">
+                    👨‍🏫 Profesores
+                </div>
+
                 <div class="link-description">
                     Enlaces proporcionados por los profesores
                 </div>
@@ -150,10 +177,10 @@
 
 
         <footer>
-            Página personal de accesos universitarios · 2026
+            Mi espacio universitario · 2026
         </footer>
 
-    </main>
+    </div>
 
 </body>
-</html>
+</html>       
